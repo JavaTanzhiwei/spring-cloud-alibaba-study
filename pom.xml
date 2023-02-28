@@ -24,6 +24,8 @@
         <spring-boot.mybatis>2.2.2</spring-boot.mybatis>
         <mybatis.version>3.5.10</mybatis.version>
         <mybatis-plus.version>3.5.3.1</mybatis-plus.version>
+        <!--多数据源-->
+        <dynamic-ds.version>3.5.2</dynamic-ds.version>
         <!--IO-->
         <poi.version>5.2.3</poi.version>
         <!--EasyExcel-->
@@ -95,6 +97,15 @@
                 <groupId>cn.hutool</groupId>
                 <artifactId>hutool-bom</artifactId>
                 <version>${hutool.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <!-- common 的依赖配置-->
+            <dependency>
+                <groupId>com.tzw</groupId>
+                <artifactId>tzw-common-bom</artifactId>
+                <version>${tzw.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -194,6 +205,7 @@
     <modules>
         <module>tzw-common</module>
         <module>tzw-nacos</module>
+        <module>tzw-modules</module>
     </modules>
     <packaging>pom</packaging>
 

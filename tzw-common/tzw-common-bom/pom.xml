@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.tzw</groupId>
+    <artifactId>tzw-common-bom</artifactId>
+    <version>1.0.0</version>
+    <packaging>pom</packaging>
+
+    <name>tzw-common-bom</name>
+    <description>tzw-common-bom common依赖项</description>
+
+   <dependencyManagement>
+       <dependencies>
+           <!-- 核心模块 -->
+           <dependency>
+               <groupId>com.tzw</groupId>
+               <artifactId>tzw-common-core</artifactId>
+               <version>${project.version}</version>
+           </dependency>
+           <!-- 数据库服务 -->
+           <dependency>
+               <groupId>com.tzw</groupId>
+               <artifactId>tzw-common-mybatis</artifactId>
+               <version>${project.version}</version>
+           </dependency>
+           <!-- dubbo -->
+           <dependency>
+               <groupId>com.tzw</groupId>
+               <artifactId>tzw-common-dubbo</artifactId>
+               <version>${project.version}</version>
+           </dependency>
+       </dependencies>
+   </dependencyManagement>
+</project>

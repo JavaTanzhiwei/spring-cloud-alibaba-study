@@ -42,6 +42,7 @@
             <scope>system</scope>
             <systemPath>${nacos.lib.path}/nacos-cmdb-${nacos.version}.jar</systemPath>
         </dependency>
+        <!--配置中心-->
         <dependency>
             <groupId>com.alibaba.nacos</groupId>
             <artifactId>nacos-config</artifactId>
