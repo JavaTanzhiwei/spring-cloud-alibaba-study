@@ -38,7 +38,7 @@ dubbo:
     # host: 192.168.0.100
   # 注册中心配置
   registry:
-    address: nacos://${spring.cloud.nacos.server-addr}?username=${username}&password=${password}
+    address: nacos://${spring.cloud.nacos.server-addr}
     group: DUBBO_GROUP
     parameters:
       namespace: ${spring.profiles.active}
