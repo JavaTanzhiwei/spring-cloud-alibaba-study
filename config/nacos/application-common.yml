@@ -39,7 +39,7 @@ dubbo:
   # 注册中心配置
   registry:
     address: nacos://${spring.cloud.nacos.server-addr}
-    group: DUBBO_GROUP
+    group: DEFAULT_GROUP
     parameters:
       namespace: ${spring.profiles.active}
   # 消费者相关配置
@@ -89,22 +89,6 @@ spring:
     deserialization:
       # 允许对象忽略json中不存在的属性
       fail_on_unknown_properties: false
-  cloud:
-    # sentinel 配置
-    sentinel:
-      # sentinel 开关
-      enabled: true
-      # 取消控制台懒加载
-      eager: true
-      transport:
-        # dashboard控制台服务名 用于服务发现
-        # 如无此配置将默认使用下方 dashboard 配置直接注册
-        server-name: tzw-sentinel-dashboard
-        # 客户端指定注册的ip 用于多网卡ip不稳点使用
-        # client-ip:
-        # 控制台地址 从1.3.0开始使用 server-name 注册
-        # dashboard: localhost:8718
-
   # redis通用配置 子服务可以自行配置进行覆盖
   redis:
     host: localhost
@@ -204,26 +188,3 @@ mybatis-plus:
       insertStrategy: NOT_NULL
       updateStrategy: NOT_NULL
       where-strategy: NOT_NULL
-
-# seata配置
-seata:
-  # 默认关闭，如需启用spring.datasource.dynami.seata需要同时开启
-  enabled: true
-  # Seata 应用编号，默认为 ${spring.application.name}
-  application-id: ${spring.application.name}
-  # Seata 事务组编号，用于 TC 集群名
-  tx-service-group: ${spring.application.name}-group
-  config:
-    type: nacos
-    nacos:
-      server-addr: ${spring.cloud.nacos.server-addr}
-      group: ${spring.cloud.nacos.config.group}
-      namespace: ${spring.profiles.active}
-      data-id: seata-server.properties
-  registry:
-    type: nacos
-    nacos:
-      application: tzw-seata-server
-      server-addr: ${spring.cloud.nacos.server-addr}
-      group: ${spring.cloud.nacos.discovery.group}
-      namespace: ${spring.profiles.active}

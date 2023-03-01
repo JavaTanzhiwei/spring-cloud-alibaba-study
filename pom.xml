@@ -53,6 +53,7 @@
                 <nacos.server>192.168.1.203:8848</nacos.server>
                 <nacos.discovery.group>DEFAULT_GROUP</nacos.discovery.group>
                 <nacos.config.group>DEFAULT_GROUP</nacos.config.group>
+                <nacos.namespace>a3ab1347-7bd6-4a0f-aedd-4f2bdb3aa5ad</nacos.namespace>
                 <logstash.address>192.168.1.203:4560</logstash.address>
             </properties>
             <activation>
