@@ -14,6 +14,7 @@
         <module>tzw-common-core</module>
         <module>tzw-common-bom</module>
         <module>tzw-common-mybatis</module>
+        <module>tzw-common-web</module>
     </modules>
 
     <artifactId>tzw-common</artifactId>

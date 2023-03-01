@@ -20,6 +20,12 @@
                <artifactId>tzw-common-core</artifactId>
                <version>${project.version}</version>
            </dependency>
+           <!-- web服务 -->
+           <dependency>
+               <groupId>com.tzw</groupId>
+               <artifactId>tzw-common-web</artifactId>
+               <version>${project.version}</version>
+           </dependency>
            <!-- 数据库服务 -->
            <dependency>
                <groupId>com.tzw</groupId>

@@ -15,7 +15,7 @@
     <description>tzw-system系统模块</description>
 
     <dependencies>
-        <!-- SpringCloud Alibaba Nacos -->
+        <!-- SpringCloud Alibaba Nacos 客户端依赖包 -->
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
@@ -24,6 +24,11 @@
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+        </dependency>
+        <!--web服务-->
+        <dependency>
+            <groupId>com.tzw</groupId>
+            <artifactId>tzw-common-web</artifactId>
         </dependency>
         <!--mybatis-->
         <dependency>
