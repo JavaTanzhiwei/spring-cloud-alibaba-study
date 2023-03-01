@@ -7,6 +7,7 @@ import com.tzw.system.bean.po.SysConfig;
 import com.tzw.system.bean.req.SysConfigReq;
 import com.tzw.system.service.SysConfigService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
@@ -16,6 +17,7 @@ import org.springframework.web.bind.annotation.*;
  * @author: tanzhiwei
  * @date: 2023/3/1  15:57
  */
+@RefreshScope
 @RequiredArgsConstructor
 @RestController
 @RequestMapping("/sys/config")

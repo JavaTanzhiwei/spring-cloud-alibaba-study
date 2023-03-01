@@ -14,7 +14,7 @@ import java.util.Objects;
  * @date: 2023/3/1  15:57
  */
 @Data
-public class AjaxResult<T> extends HashMap<String, Object> {
+public class AjaxResult extends HashMap<String, Object> {
 
     private static final long serialVersionUID = 4231966070681433544L;
     /**
