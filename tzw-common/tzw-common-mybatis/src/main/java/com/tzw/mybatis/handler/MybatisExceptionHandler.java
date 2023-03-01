@@ -1,6 +1,6 @@
 package com.tzw.mybatis.handler;
 
-import com.tzw.core.domain.R;
+import com.tzw.core.domain.AjaxResult;
 import lombok.extern.slf4j.Slf4j;
 import org.mybatis.spring.MyBatisSystemException;
 import org.springframework.dao.DuplicateKeyException;
@@ -22,25 +22,25 @@ public class MybatisExceptionHandler {
      * 主键或UNIQUE索引，数据重复异常
      */
     @ExceptionHandler(DuplicateKeyException.class)
-    public R<Void> handleDuplicateKeyException(DuplicateKeyException e, HttpServletRequest request) {
-        String requestURI = request.getRequestURI();
-        log.error("请求地址'{}',数据库中已存在记录'{}'", requestURI, e.getMessage());
-        return R.fail("数据库中已存在该记录，请联系管理员确认");
+    public AjaxResult<Void> handleDuplicateKeyException(DuplicateKeyException e, HttpServletRequest request) {
+        String requestUri = request.getRequestURI();
+        log.error("请求地址'{}',数据库中已存在记录'{}'", requestUri, e.getMessage());
+        return AjaxResult.error("数据库中已存在该记录，请联系管理员确认");
     }
 
     /**
      * Mybatis系统异常 通用处理
      */
     @ExceptionHandler(MyBatisSystemException.class)
-    public R<Void> handleCannotFindDataSourceException(MyBatisSystemException e, HttpServletRequest request) {
+    public AjaxResult<Void> handleCannotFindDataSourceException(MyBatisSystemException e, HttpServletRequest request) {
         String requestURI = request.getRequestURI();
         String message = e.getMessage();
         if (message.contains("CannotFindDataSourceException")) {
             log.error("请求地址'{}', 未找到数据源", requestURI);
-            return R.fail("未找到数据源，请联系管理员确认");
+            return AjaxResult.error("未找到数据源，请联系管理员确认");
         }
         log.error("请求地址'{}', Mybatis系统异常", requestURI, e);
-        return R.fail(message);
+        return AjaxResult.error(message);
     }
 
 }
