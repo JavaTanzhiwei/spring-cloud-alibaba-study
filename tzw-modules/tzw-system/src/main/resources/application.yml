@@ -21,6 +21,7 @@ spring:
         # 注册组
         group: @nacos.discovery.group@
         namespace: ${spring.profiles.active}
+        cluster-name: tzw-system
       config:
         # 配置组
         group: @nacos.config.group@
