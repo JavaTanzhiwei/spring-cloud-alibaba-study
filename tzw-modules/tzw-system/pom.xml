@@ -31,10 +31,10 @@
             <artifactId>tzw-common-web</artifactId>
         </dependency>
         <!--mybatis-->
-       <!-- <dependency>
+        <dependency>
             <groupId>com.tzw</groupId>
             <artifactId>tzw-common-mybatis</artifactId>
-        </dependency>-->
+        </dependency>
         <!-- dubbo -->
         <dependency>
             <groupId>com.tzw</groupId>

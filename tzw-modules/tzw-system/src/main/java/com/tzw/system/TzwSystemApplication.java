@@ -1,5 +1,6 @@
 package com.tzw.system;
 
+import cn.hutool.core.date.DateUtil;
 import org.apache.dubbo.config.spring.context.annotation.EnableDubbo;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -18,6 +19,6 @@ public class TzwSystemApplication {
         SpringApplication application = new SpringApplication(TzwSystemApplication.class);
         application.setApplicationStartup(new BufferingApplicationStartup(2048));
         application.run(args);
-        System.out.println("系统模块-------->>>>启动成功");
+        System.out.println("系统模块-------->>>>启动成功    " + DateUtil.now());
     }
 }

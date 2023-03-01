@@ -1,4 +1,4 @@
-package com.tzw.core.web.domain;
+package com.tzw.core.base;
 
 import com.baomidou.mybatisplus.annotation.TableField;
 import lombok.Data;
@@ -15,7 +15,7 @@ import java.util.List;
 
 @Data
 @EqualsAndHashCode(callSuper = true)
-public class TreeEntity<T> extends BaseEntity {
+public class TreePo<T> extends BasePo {
 
     private static final long serialVersionUID = 1L;
 
